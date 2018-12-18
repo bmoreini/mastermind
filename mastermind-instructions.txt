@@ -7,14 +7,14 @@
 
 /* Main Function */
 // define Main function
-	// call setCode function
+	// set code equal to setCode function
 	// start while loop - check if 4 b's or first guess != q
 		// increment turn
 		// set guess = getGuess
 		// set feedback = testGuess(code, guess)
 		// populate thisTurn with guess and feedback
 		// push thisTurn to turnRecords
-		// alert thisTurn
+		// alert turn, thisTurn
 	// }
 	// alert "Charlie you've won" if while loop ended with first condition
 	// alert "Quitter!" if while loop ended with section condition
