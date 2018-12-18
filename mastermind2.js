@@ -119,17 +119,24 @@ function formatFeedback(b,w){
 
 /* Define function addTurn to make an array thisTurn from Guess and Feedback */
 function addTurn(guess,feedback){
+	// initialize thisTurn;
 	var thisTurn =[];
+	// set turnValues = 4 + length of feedback
 	var turnValues=4+feedback.length;
+	// write turnvalues into thisTurn
 	for (i=0;i<turnValues;i++){
+		// if index 0 - 3, write guess sub index
 		if (i<4){
 			thisTurn.push(guess[i]);
 		}
+		// if index > 3, write feedback sub index-4 to correct for position
 		else if (i>3){
 			thisTurn.push(feedback[i-4]);
 		}
 	}
+	// console log thisTurn
 	console.log("thisTurn = "+thisTurn);
+	// return thisTurn
 	return thisTurn;
 	/*tested: No*/
 }
