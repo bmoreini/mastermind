@@ -32,19 +32,16 @@
 	// count the blacks and erase tempCode and tempGuess as you go - one loop
 	// count the whites and erase tempCode and tempGuess as you go - nested loops
         // use "continue" once a match is found in the inner loop
-	// console log the blacks feedback
+	// set feedback == call feedback function, sending it black and white counts
 	// return the feedback
 
 
 /* Format the Feedback */
 // define function formatFeedback to receive feedback and analyze input, put b's first, w's second, delete the rest
-	// initialize cleanFeedback;
-	// initialize the black and white count variables
+	// initialize feedback;
 	// count the blacks and whites in a loop
-	// define remainder as 4 - (b + w)
 	// write the black pegs first to cleanFeedback
 	// write the white pegs second to cleanFeedback
-	// delete the blanks in the remainder with array.pop
-	// console log the formatted cleanFeedback
+	// console log the feedback
 	// return the new feedback array
 
