@@ -24,13 +24,13 @@
 // define function setCode to pull from six colors to randomly fill code with four values 0-5
 
 /* Get a Player's Guess */
-// define function getGuess to prompt player for each of four values and stores in guess array
+// define function getGuess to prompt player for each of four colors and stores in guess array
 
 /* Analyze the Guess */
 // define function testGuess to analyze guess against code and produces feedback
-  // initialize the temporary code and guess arrays as copies
-	// count the blacks and erase tempcode and tempguess as you go - one loop
-	// count the whites and erase tempcode and tempguess as you go - nested loops
+  // initialize the tempCode and tempGuess arrays as copies using array.slice(0);
+	// count the blacks and erase tempCode and tempGuess as you go - one loop
+	// count the whites and erase tempCode and tempGuess as you go - nested loops
         // use "continue" once a match is found in the inner loop
 	// console log the blacks feedback
 	// return the feedback
