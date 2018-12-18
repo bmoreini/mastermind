@@ -3,16 +3,18 @@
 /* Initialization */
 //colors, code, guess, feedback, cleanFeedback -- all arrays -- and turn
 // colors = r,b,g,w,c,y
+// add arrays for thisTurn, turnRecords
 
 /* Main Function */
 // define Main function
 	// call setCode function
-	// start while loop - check if last cleanFeedback = b, or first guess != q
+	// start while loop - check if 4 b's or first guess != q
 		// increment turn
 		// set guess = getGuess
 		// set feedback = testGuess(code, guess)
-		// set cleanFeedback = formatFeedback(feedback)
-		// alert turn and cleanFeedback
+		// populate thisTurn with guess and feedback
+		// push thisTurn to turnRecords
+		// alert thisTurn
 	// }
 	// alert "Charlie you've won" if while loop ended with first condition
 	// alert "Quitter!" if while loop ended with section condition
@@ -45,3 +47,11 @@
 	// console log the feedback
 	// return the new feedback array
 
+/* Define function addTurn to make an array thisTurn from Guess and Feedback */
+	// initialize thisTurn;
+	// set turnValues = 4 + length of feedback
+	// write turnvalues into thisTurn
+		// if index 0 - 3, write guess sub index
+		// if index > 3, write feedback sub index-4 to correct for position
+	// console log thisTurn
+	// return thisTurn
