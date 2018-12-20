@@ -105,6 +105,18 @@ function testGuess(code,guess){
 	return feedback;
 }
 
+function formatFeedback(b,w){
+	var feedback=[]; 
+	for (var i=0;i<b;i++){
+		feedback[i]="b";
+	}
+	for (i=b;i<b+w;i++){
+		feedback[i]="w";
+	}
+	// console.log("Feedback = "+feedback);
+	return feedback;
+}
+
 /* Define function addTurn to make an array thisTurn from Guess and Feedback */
 function addTurn(guess,feedback){
 	// initialize thisTurn;
