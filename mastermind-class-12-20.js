@@ -152,20 +152,12 @@ function formatTurnRecords(turnRecords){
 	var thisFeedback = "";
 	for (var row=0;row<turn;row++) {
 		alertString = alertString.concat("Guess "+(row+1)+" : ");
-		thisGuess=turnRecords[0].slice(0, 4).join();
+		thisGuess=turnRecords[row].slice(0, 4).join(" ");
 		alertString = alertString.concat(thisGuess);
 		alertString = alertString.concat(" || ");
-		thisFeedback= turnRecords[0].slice(4, turnRecords[0].length).join();
+		thisFeedback= turnRecords[row].slice(4, turnRecords[row].length).join();
 		alertString = alertString.concat(thisFeedback);
+		alertString = alertString.concat("\n");
 		alert(alertString); // testing purposes
 	}
 }
-
-
-
-
-
-
-
-
-
