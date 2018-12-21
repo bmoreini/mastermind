@@ -151,15 +151,15 @@ function formatTurnRecords(turnRecords){
 	var thisGuess = "";
 	var thisFeedback = "";
 	for (var row=0;row<turn;row++) {
-		alertString = alertString.concat("Guess "+row+": ");
-		thisGuess=turnRecords[0].slice(0, 4).join(" ");
+		alertString = alertString.concat("Guess "+(row+1)+" : ");
+		thisGuess=turnRecords[0].slice(0, 4).join();
 		alertString = alertString.concat(thisGuess);
+		alertString = alertString.concat(" || ");
+		thisFeedback= turnRecords[0].slice(4, turnRecords[0].length).join();
+		alertString = alertString.concat(thisFeedback);
 		alert(alertString); // testing purposes
 	}
 }
-
-
-
 
 
 
