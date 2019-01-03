@@ -5,6 +5,9 @@
 // colors = r,b,g,w,c,y
 
 /* Main Function */
+
+// call Main function (if no HTML)
+
 // define Main function
 	// set code equal to setCode function
 	// start while loop - check if 4 b's or first guess != q
