@@ -34,19 +34,20 @@
 	// count the blacks and erase tempCode and tempGuess as you go - one loop
 	// count the whites and erase tempCode and tempGuess as you go - nested loops
         // use "continue" once a match is found in the inner loop
-	// set feedback == call feedback function, sending it black and white counts
+	// set feedback == call formatFeedback function, sending it black and white counts
 	// return the feedback
 
 
 /* Format the Feedback */
 // define function formatFeedback to receive feedback and analyze input, put b's first, w's second, delete the rest
 	// initialize feedback;
-	// count the blacks and whites in a loop
-	// write the black pegs first to cleanFeedback
-	// write the white pegs second to cleanFeedback
+	// loop to the blacks count
+		// write the black pegs first to cleanFeedback
+	// loop to the whites count
+		// write the white pegs second to cleanFeedback
 	// console log the feedback
 	// return the new feedback array
-
+	
 /* Define function addTurn to make an array thisTurn from Guess and Feedback */
 	// initialize thisTurn;
 	// set turnValues = 4 + length of feedback
