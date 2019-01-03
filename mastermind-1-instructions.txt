@@ -2,7 +2,7 @@
 
 /* Initialization */
 // colors, code, guess, feedback -- all arrays -- and turn
-// colors = r,b,g,w,c,y
+// set colors = r,b,g,w,c,y
 
 /* Main Function */
 
@@ -14,7 +14,7 @@
 		// increment turn
 		// set guess = getGuess
 		// set feedback = testGuess(code, guess)
-		// console log guess and feedback
+		// console log turn, guess and feedback
 	// }
 	// alert "Charlie you've won" if while loop ended with first condition
 	// alert "Quitter!" if while loop ended with section condition
