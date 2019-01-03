@@ -1,7 +1,7 @@
 /* Mastermind I - no saved turns */
 
 /* Initialization */
-//colors, code, guess, feedback, cleanFeedback -- all arrays -- and turn
+// colors, code, guess, feedback, cleanFeedback -- all arrays -- and turn
 // colors = r,b,g,w,c,y
 // add arrays for thisTurn, turnRecords
 
