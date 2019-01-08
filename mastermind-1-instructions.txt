@@ -32,8 +32,8 @@
 // define function testGuess to receive code and guess, and analyze guess against code and produces feedback
 	// initialize b, w, as 0;
 	// initialize tempCode and tempGuess arrays, as copies with array.slice(0);
-	// count the blacks and erase tempCode and tempGuess as you go - one loop
-	// count the whites and erase tempCode and tempGuess as you go - nested loops
+	// count the blacks and erase tempCode and tempGuess as you go - one loop - make sure you don't count blanks!
+	// count the whites and erase tempCode and tempGuess as you go - nested loops - make sure you don't count blanks!
         // use "continue" once a match is found in the inner loop
 	// set feedback equal to called formatFeedback function, sending it black and white counts
 	// return the feedback
