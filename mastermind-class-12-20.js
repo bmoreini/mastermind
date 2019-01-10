@@ -11,20 +11,20 @@ colors = ["r","b","g","w","c","y"];
 // add arrays for thisTurn, turnRecords
 var thisTurn = [], turnRecords = [];
 
+main();
 /* Main Function */
+
 // define Main function
 function main() {
 	// tell player the colors
 	alert("Colors include [r]ed, [c]yan, [y]ellow, [w]hite, [b]lack, [g]reen.");
-	// set the code
-	code=setCode(colors); 
+	// set code = setCode(colors)
+	code=setCode(colors);  
 	// we're going to loop as long as the answer is wrong and the player didn't want to quit, so:
 	// keep looping while fourth feedback is not a "b" and first guess is not a "q"
 	while (feedback[3]!="b" && guess[0]!="q")  {
 		// increment turn
 		turn++;
-		// set code = setCode(colors)
-		code=setCode(colors); 
 		// set guess = getGuess
 		guess=getGuess();
 		// set feedback = testGuess(guess)
