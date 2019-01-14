@@ -10,6 +10,7 @@ var turn=0;
 colors = ["r","b","g","w","c","y"];
 // add arrays for thisTurn, turnRecords
 var thisTurn = [], turnRecords = [];
+var alertString="";
 
 main();
 /* Main Function */
@@ -26,7 +27,7 @@ function main() {
 		// increment turn
 		turn++;
 		// set guess = getGuess
-		guess=getGuess();
+		guess=getGuess(alertString);
 		// set feedback = testGuess(guess)
 		feedback=testGuess(code,guess); 
     // store guess and feedback in thisTurn
@@ -35,7 +36,7 @@ function main() {
 		turnRecords.push(thisTurn);
     // alert the guess and feedback for all turns (ugly display)
 		//alert("Turn and Feedback "+turnRecords);
-		formatTurnRecords(turnRecords);
+		alertString=formatTurnRecords(turnRecords);
 		//alert("Guess "+turn+" : "+guess+" returns: "+feedback); 
 	}
 	// alert "Charlie you've won" if while loop ended with first condition
@@ -63,10 +64,9 @@ function setCode(colors){
 /* Get a Player's Guess */
 // define function getGuess to prompt player for each of four values and store in guess array
 function getGuess(){
-	for(var i=0; i<4; i++){
-		guess[i]=prompt("Enter a color for position "+(i+1));
-	}
-	console.log(guess);
+	var myGuess=prompt(alertString+"\n Enter four colors surrounded by commas: ");
+	var guess = myGuess.split(',');
+	alert("Your guess was: "+guess);
 	return guess;
 }
 
@@ -158,6 +158,6 @@ function formatTurnRecords(turnRecords){
 		thisFeedback= turnRecords[row].slice(4, turnRecords[row].length).join();
 		alertString = alertString.concat(thisFeedback);
 		alertString = alertString.concat("\n");
-		alert(alertString); // testing purposes
 	}
+	return alertString;
 }
