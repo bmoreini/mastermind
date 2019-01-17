@@ -64,9 +64,15 @@ function setCode(colors){
 /* Get a Player's Guess */
 // define function getGuess to prompt player for each of four values and store in guess array
 function getGuess(){
-	var myGuess=prompt(alertString+"\n Enter four colors surrounded by commas: ");
-	var guess = myGuess.split(',');
-	alert("Your guess was: "+guess);
+	var correct="n";
+	while (correct!="y"){
+		var myGuess=prompt(alertString+"\n Turn "+turn+": Enter four colors surrounded by commas: ");
+		var guess = myGuess.split(',');
+		correct=prompt("Your guess was: "+guess+". Was this correct? y, n or c\(show colors\)");
+		if (correct=="c"){
+			alert("Colors include [r]ed, [c]yan, [y]ellow, [w]hite, [b]lack, [g]reen.");
+		}
+	}
 	return guess;
 }
 
@@ -142,10 +148,6 @@ function addTurn(guess,feedback){
 } // end function	
 
 /* Function to format turnRecords */
-// var text1 = "Hello";
-// var text2 = "World";
-// var text3 = text1.concat(" ", text2);
-
 function formatTurnRecords(turnRecords){
 	var alertString = "";
 	var thisGuess = "";
