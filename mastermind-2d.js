@@ -66,7 +66,7 @@ function setCode(colors){
 function getGuess(){
 	var correct="n";
 	while (correct!="y"){
-		var myGuess=prompt(alertString+"\n Turn "+turn+": Enter four colors surrounded by commas: ");
+		var myGuess=prompt(alertString+"\n Guess "+turn+": Enter four colors surrounded by commas: ");
 		var guess = myGuess.split(',');
 		correct=prompt("Your guess was: "+guess+". Was this correct? y, n or c\(show colors\)");
 		if (correct=="c"){
