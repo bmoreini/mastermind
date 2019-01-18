@@ -10,7 +10,7 @@ var alertString="";
 
 /* Main */
 // Call formatTurnRecords and alert the result
-formatTurnRecords(turnRecords, alertString);
+alertString=formatTurnRecords(turnRecords, alertString);
 alert(alertString);
 
 /* Function */
