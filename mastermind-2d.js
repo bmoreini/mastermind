@@ -150,7 +150,7 @@ function addTurn(guess,feedback){
 /* Function to format turnRecords */
 function formatTurnRecords(turnRecords){
 	var thisGuess = "";
-	alertString="";
+	var alertString="";
 	var thisFeedback = "";
 	for (var row=0;row<turn;row++) {
 		alertString = alertString.concat("Guess "+(row+1)+" : ");
