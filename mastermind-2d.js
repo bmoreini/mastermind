@@ -36,7 +36,7 @@ function main() {
 		turnRecords.push(thisTurn);
     // alert the guess and feedback for all turns (ugly display)
 		//alert("Turn and Feedback "+turnRecords);
-		alertString=formatTurnRecords(turnRecords);
+		alertString=formatTurnRecords(turnRecords,alertString);
 		//alert("Guess "+turn+" : "+guess+" returns: "+feedback); 
 	}
 	// alert "Charlie you've won" if while loop ended with first condition
@@ -148,9 +148,9 @@ function addTurn(guess,feedback){
 } // end function	
 
 /* Function to format turnRecords */
-function formatTurnRecords(turnRecords){
+function formatTurnRecords(turnRecords,alertString){
 	var thisGuess = "";
-	var alertString="";
+	alertString="";
 	var thisFeedback = "";
 	for (var row=0;row<turn;row++) {
 		alertString = alertString.concat("Guess "+(row+1)+" : ");
