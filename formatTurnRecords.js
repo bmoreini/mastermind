@@ -1,16 +1,21 @@
-/* Format and Store the Feedback */
+/* Format and Store the Feedback *
 
+/* Globals */
 // Prepopulate Turnrecords for testing purposes
 var turnRecords=[];
 turnRecords[0]=["r","w","w","r","b","w"];
 turnRecords[1]=["r","g","g","w","b","b","w"];
 var turn=2;
 var alertString="";
-formatTurnRecords(turnRecords);
+
+/* Main */
+// Call formatTurnRecords and alert the result
+formatTurnRecords(turnRecords, alertString);
 alert(alertString);
 
+/* Function */
 // Define function formatTurnRecords 
-function formatTurnRecords(turnRecords) {
+function formatTurnRecords(turnRecords, alertString) {
 // initialize thisGuess string
 var thisGuess="";
 // initialize thisFeedback string
@@ -31,6 +36,7 @@ for (row=0;row<turn;row++){
 	// Add thisFeedback to alertString
 	alertString=alertString.concat(thisFeedback);
 	alertString=alertString.concat("\n");
-}
+	} // end loop
+return alertString;
 }
 
