@@ -148,18 +148,33 @@ function addTurn(guess,feedback){
 } // end function	
 
 /* Function to format turnRecords */
+// Define function formatTurnRecords, with parameters turnRecords and alertString 
 function formatTurnRecords(turnRecords,alertString){
+	// initialize thisGuess string
 	var thisGuess = "";
-	alertString="";
+	// initialize thisFeedback string
 	var thisFeedback = "";
+	// clear alertString
+	alertString="";
+	// turnRecords is a 2D array. Each row is one turn. Loop over each turn.
 	for (var row=0;row<turn;row++) {
+		// For each row, start with “Guess”, then turn number (row + 1) plus colon “:” 
 		alertString = alertString.concat("Guess "+(row+1)+" : ");
+		// Assign to thisGuess the first 4 values of turnRecords for this row (that turn’s guess) and join them with spaces.
 		thisGuess=turnRecords[row].slice(0, 4).join(" ");
+		// Add thisGuess to alertString (set it equal to itself plus thisGuess)
 		alertString = alertString.concat(thisGuess);
+		// Add a separator (“||”) to alertString before the feedback
 		alertString = alertString.concat(" || ");
+		// Pull the feedback elements from turnRecords row (based on turnRecords.length) and add to thisFeedback
 		thisFeedback= turnRecords[row].slice(4, turnRecords[row].length).join();
+		// Add thisFeedback to alertString
 		alertString = alertString.concat(thisFeedback);
+		// Add a line break to alertString
 		alertString = alertString.concat("\n");
+		// end loop
 	}
+	// return alertString
 	return alertString;
+// end function
 }
