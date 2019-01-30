@@ -26,13 +26,13 @@ var alertString="";
 	// For each row, add to alertString what we show player before they guess:
 	// Add word “guess”, then show the turn number (row + 1) plus colon “:” 
 
-	// Assign to thisGuess the first 4 values of turnRecords for this row (that turn’s guess) and join them with spaces.
+	// Assign to thisGuess the first 4 values of turnRecords for this row (that turn’s guess) using slice, and join them with spaces.
 
-	// Add thisGuess to alertString (set it equal to itself plus thisGuess)
+	// Add thisGuess to alertString (set it equal to itself plus thisGuess) via concatenation
 
 	// Add a separator (“||”) to alertString before the feedback
 
-	// Pull the feedback elements from turnRecords row (based on turnRecords.length) and add to thisFeedback
+	// Pull the feedback elements from the last turnRecords row (based on turnRecords.length) and add to thisFeedback
 
 	// Add thisFeedback to alertString
 	
