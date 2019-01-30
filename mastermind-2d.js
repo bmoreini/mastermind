@@ -36,7 +36,7 @@ function main() {
 		turnRecords.push(thisTurn);
     // alert the guess and feedback for all turns (ugly display)
 		//alert("Turn and Feedback "+turnRecords);
-		alertString=formatTurnRecords(turnRecords,alertString);
+		alertString=formatTurnRecords(turnRecords);
 		//alert("Guess "+turn+" : "+guess+" returns: "+feedback); 
 	}
 	// alert "Charlie you've won" if while loop ended with first condition
@@ -64,15 +64,9 @@ function setCode(colors){
 /* Get a Player's Guess */
 // define function getGuess to prompt player for each of four values and store in guess array
 function getGuess(){
-	var correct="n";
-	while (correct!="y"){
-		var myGuess=prompt(alertString+"\n Guess "+turn+": Enter four colors surrounded by commas: ");
-		var guess = myGuess.split(',');
-		correct=prompt("Your guess was: "+guess+". Was this correct? y, n or c\(show colors\)");
-		if (correct=="c"){
-			alert("Colors include [r]ed, [c]yan, [y]ellow, [w]hite, [b]lack, [g]reen.");
-		}
-	}
+	var myGuess=prompt(alertString+"\n Enter four colors surrounded by commas: ");
+	var guess = myGuess.split(',');
+	alert("Your guess was: "+guess);
 	return guess;
 }
 
@@ -148,33 +142,22 @@ function addTurn(guess,feedback){
 } // end function	
 
 /* Function to format turnRecords */
-// Define function formatTurnRecords, with parameters turnRecords and alertString 
-function formatTurnRecords(turnRecords,alertString){
-	// initialize thisGuess string
+// var text1 = "Hello";
+// var text2 = "World";
+// var text3 = text1.concat(" ", text2);
+
+function formatTurnRecords(turnRecords){
+	var alertString = "";
 	var thisGuess = "";
-	// initialize thisFeedback string
 	var thisFeedback = "";
-	// clear alertString
-	alertString="";
-	// turnRecords is a 2D array. Each row is one turn. Loop over each turn.
 	for (var row=0;row<turn;row++) {
-		// For each row, start with “Guess”, then turn number (row + 1) plus colon “:” 
 		alertString = alertString.concat("Guess "+(row+1)+" : ");
-		// Assign to thisGuess the first 4 values of turnRecords for this row (that turn’s guess) and join them with spaces.
 		thisGuess=turnRecords[row].slice(0, 4).join(" ");
-		// Add thisGuess to alertString (set it equal to itself plus thisGuess)
 		alertString = alertString.concat(thisGuess);
-		// Add a separator (“||”) to alertString before the feedback
 		alertString = alertString.concat(" || ");
-		// Pull the feedback elements from turnRecords row (based on turnRecords.length) and add to thisFeedback
 		thisFeedback= turnRecords[row].slice(4, turnRecords[row].length).join();
-		// Add thisFeedback to alertString
 		alertString = alertString.concat(thisFeedback);
-		// Add a line break to alertString
 		alertString = alertString.concat("\n");
-		// end loop
 	}
-	// return alertString
 	return alertString;
-// end function
 }
