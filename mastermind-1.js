@@ -1,7 +1,7 @@
 /* Mastermind 1: Simple */
 
 /* Global variables or Globals */
-var colors = ["r","b","g","w","c","y"];code = []; guess = []; feedback = []; turn = 0
+var colors = ["r","b","g","w","c","y"];code = []; guess = []; feedback = []; turn = 0;
 
 /* Main */
 code=setCode(colors);
