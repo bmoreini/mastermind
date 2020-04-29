@@ -11,7 +11,6 @@
 // console log guess and feedback
 // console log "you win!" if fourth feedback is a "b"
 
-
 /* Functions */
 
 /* Create the Secret Code */
@@ -27,19 +26,5 @@
 // Return guess.
 
 /* Analyze the Guess */
-// define function testGuess to receive code and guess, analyze guess against code, call feedback formatter, return feedback
-	// initialize b, w, as 0;
-	// initialize tempCode and tempGuess arrays as copies of code and guess with array.slice(0);
-	// count the blacks and erase tempCode and tempGuess as you go - one g loop - don't count blanks!
-	// count the whites and erase tempCode and tempGuess as you go in nested g and c loops -  don't count blanks!
-       // use "continue" once a match is found in the inner loop
-	// set feedback equal to formatFeedback function sent black and white counts
-	// return the feedback
 
-/* Format the Feedback */
-// define function formatFeedback to receive blacks and whites, put b's first, w's second, delete the rest
-	// initialize feedback array;
-	// loop from 0 to b's plus w's
-		// write "b" if index is less than b
-		// otherwise write "w" 
-	// return the new feedback array
+
